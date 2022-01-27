@@ -6,7 +6,7 @@
 <ng-template #modal>
   <div class="form-field">
     <label for="firstName">First name</label>
-    <input id="firstName" [(value)]="firstName">
+    <input id="firstName">
   </div>
 
   <div class="form-field">
@@ -18,6 +18,9 @@
     <label for="age">Age</label>
     <input id="age">
   </div>
+  <label for="info">Subscribe to news letter</label>
+  <input type="checkbox" id="info" (change)="info = !info">
+  <p [@fade] *ngIf="info">This is a placeholder for more information</p>
 
   <div class="button-group">
     <button class="button button-primary" type="button">Submit</button>
